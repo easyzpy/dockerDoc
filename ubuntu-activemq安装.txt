@@ -1,0 +1,5 @@
+获取linux是32 还是 64位   getconf LONG_BIT
+
+chown -R activemq:users activemq
+
+

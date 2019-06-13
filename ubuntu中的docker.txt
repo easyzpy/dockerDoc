@@ -1,0 +1,4 @@
+1.检查linux内核版本
+  uname -a
+2.检查Device Mapper
+  ls -l /sys/class/misc/device-mapper

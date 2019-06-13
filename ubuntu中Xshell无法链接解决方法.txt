@@ -1,0 +1,27 @@
+修改：
+
+vim /etc/ssh/sshd_config
+
+找到：
+
+# Authenticaton
+
+LoginGraceTime 120
+
+PremitRootLogin without passwd
+
+StrictModes yes
+
+修改为：
+
+# Authenticaton
+
+LoginGraceTime 120
+
+PremitRootLogin yes
+
+StrictModes yes
+
+然后重启ssh服务：
+
+# /etc/init.d/ssh restart

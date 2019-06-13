@@ -1,0 +1,33 @@
+解压安装包jdk-8u171-linux-x64.tar.gz
+tar -zxvf jdk-8u171-linux-x64.tar.gz
+将解压后的文件夹移到/usr/lib目录下
+切换到 /usr/lib目录下
+
+cd  /usr/lib
+并新建jdk目录
+
+sudo mkdir jdk
+将解压的jdk文件复制到新建的/usr/lib/jdk目录下来
+
+sudo mv ~/jdk1.8.0_171/usr/lib/jdk
+执行命令后可到 usr/lib/jdk 目录下查看是否复制成功
+配置java环境变量
+这里是将环境变量配置在etc/profile，即为所有用户配置JDK环境。
+使用命令打开/etc/profile文件
+
+sudo vi /etc/profile
+在末尾添加以下几行文字：
+
+#set java env
+export JAVA_HOME=/usr/lib/jdk/jdk1.8.0_171
+export JRE_HOME=${JAVA_HOME}/jre    
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib    
+export PATH=${JAVA_HOME}/bin:$PATH 
+执行命令使修改立即生效
+
+source /etc/profile 
+--------------------- 
+作者：sky凌乱的微笑 
+来源：CSDN 
+原文：https://blog.csdn.net/smile_from_2015/article/details/80056297 
+版权声明：本文为博主原创文章，转载请附上博文链接！
