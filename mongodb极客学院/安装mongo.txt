@@ -1,0 +1,7 @@
+1.在mongodb官网下载tgz包
+2.解压
+3.添加PATH vim ~/.bashrc 
+	MONGODB_HOME=/usr/local/mydownload/mongodb-linux-x86_64-ubuntu1804-4.2.0
+	PATH=$PATH:$MONGODB_HOME/bin
+	
+$source ~/.bashrc
